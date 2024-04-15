@@ -49,6 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var container = document.getElementById('content');
     resultColors.forEach(function(color) {
         var div = document.createElement('div');
+        var tag = document.createElement('div')
+        tag.classList.add('tag');
+        tag.innerHTML = 'rgb(' + color.join(',') + ')';
+        div.appendChild(tag);
         div.classList.add('item');
         div.style.backgroundColor = 'rgb(' + color.join(',') + ')';
         container.appendChild(div);
@@ -63,6 +67,10 @@ document.addEventListener('DOMContentLoaded', function() {
             var div = document.createElement('div');
             div.classList.add('item');
             div.style.backgroundColor = 'rgb(' + resultColor.join(',') + ')';
+            var tag = document.createElement('div')
+            tag.classList.add('tag');
+            tag.innerHTML = 'rgb(' + resultColor.join(',') + ')';
+            div.appendChild(tag);
             container.appendChild(div);
         });
     });
